@@ -5,7 +5,7 @@ height=576
 width=1024
 cond_aug=0.02
 fps=10
-image_input='examples/basic/eduardo-gorghetto-5auIBbcoRNw-unsplash.jpg'
+image_input='examples/basic/input.jpg'
 res_dir="outputs/motionctrl_svd"
 
 if [ ! -d $res_dir ]; then
