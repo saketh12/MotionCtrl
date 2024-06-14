@@ -25,10 +25,8 @@ python main/inference/motionctrl_cmcm.py \
     --motion 127 \
     --cond_aug $cond_aug \
     --decoding_t 1 \
-    --resize \
     --height $height \
     --width $width \
-    --sample_num 2 \
-    --transform \
+    --sample_num 1 \
     --pose_dir 'examples/camera_poses' \
     --speed 2.0
