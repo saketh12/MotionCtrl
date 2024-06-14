@@ -22,16 +22,19 @@ from torchvision.transforms import CenterCrop, Compose, Resize, ToTensor
 sys.path.insert(1, os.path.join(sys.path[0], '..', '..'))
 from sgm.util import default, instantiate_from_config
 
-camera_poses = [
-    'test_camera_L',
-    # 'test_camera_D',
-    # 'test_camera_I',
-    # 'test_camera_O',
-    # 'test_camera_R',
-    # 'test_camera_U',
-    # 'test_camera_Round-ZoomIn',
-    # 'test_camera_Round-RI_90',
-]
+# camera_poses = [
+#     'test_camera_L',
+#     # 'test_camera_D',
+#     # 'test_camera_I',
+#     # 'test_camera_O',
+#     # 'test_camera_R',
+#     # 'test_camera_U',
+#     # 'test_camera_Round-ZoomIn',
+#     # 'test_camera_Round-RI_90',
+# ]
+
+with open('motion.txt', 'r') as f:
+    camera_poses = [line.strip() for line in f]
 
 def to_relative_RT2(org_pose, keyframe_idx=0, keyframe_zero=False):
         org_pose = org_pose.reshape(-1, 3, 4) # [t, 3, 4]
