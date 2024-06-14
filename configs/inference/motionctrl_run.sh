@@ -19,7 +19,7 @@ python main/inference/motionctrl_cmcm.py \
     --savedir $res_dir \
     --savefps 10 \
     --ddim_steps 25 \
-    --frames 14 \
+    --frames 28 \
     --input $image_input \
     --fps $fps \
     --motion 127 \
