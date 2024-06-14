@@ -408,9 +408,12 @@ if __name__ == "__main__":
     #Fire(sample)
     parser = get_parser()
     args = parser.parse_args()
+
+    from PIL import Image
+    width, height = Image.open('examples/basic/input.jpg').size
     sample(input_path=args.input, ckpt=args.ckpt, config=args.config, num_frames=args.frames, num_steps=args.ddim_steps, \
         fps_id=args.fps, motion_bucket_id=args.motion, cond_aug=args.cond_aug, seed=args.seed, \
         decoding_t=args.decoding_t, output_folder=args.savedir, save_fps=args.savefps, resize=args.resize,
-        pose_dir=args.pose_dir, sample_num=args.sample_num, height=args.height, width=args.width,
+        pose_dir=args.pose_dir, sample_num=args.sample_num, height=height, width=width,
         transform=args.transform, save_images=args.save_images, speed=args.speed)
     
